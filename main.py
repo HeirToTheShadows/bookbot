@@ -1,4 +1,6 @@
 def main():
+    from stats import get_num_words
+    from stats import get_char_dict
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
     num_words = get_num_words(text)
@@ -10,8 +12,7 @@ def main():
 def get_book_text(path):
     with open(path) as f:
         return f.read()
-from stats import get_num_words
-from stats import get_char_dict
+
 
 
 main()
