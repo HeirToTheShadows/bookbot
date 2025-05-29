@@ -7,8 +7,8 @@ def main():
     num_words = get_num_words(text)
     char_count = get_char_dict(text)
     print(f"{num_words} words found in the document.")
-    print (char_count)
-
+    for key in char_count:
+        print(f"{key}: {char_count[key]}")
 
 def get_book_text(path):
     with open(path) as f:
