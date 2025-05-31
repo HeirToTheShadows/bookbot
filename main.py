@@ -1,13 +1,14 @@
-from stats import get_num_words, get_char_dict
+from stats import get_num_words, get_char_dict, sort_ditct
 
 def main():
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
     num_words = get_num_words(text)
     char_count = get_char_dict(text)
-    print(f"{num_words} words found in the document.")
+    dict = sort_ditct(char_count)
+    print(f"{num_words} words foun d in the document.")
     for key in char_count:
-        print(f"'{key}': {char_count[key]}")
+        print(f"============ BOOKBOT ============'\n'Analyzing book found at books/frankenstein.txt...'\n'{dict}'\n' Found {num_words} total words '\n'{dict}")
 
 def get_book_text(path):
     with open(path) as f:
