@@ -6,9 +6,7 @@ def main():
     num_words = get_num_words(text)
     char_count = get_char_dict(text)
     dict = sort_ditct(char_count)
-    print(f"{num_words} words foun d in the document.")
-    for key in char_count:
-        print(f"============ BOOKBOT ============'\n'Analyzing book found at books/frankenstein.txt...'\n'{dict}'\n' Found {num_words} total words '\n'{dict}")
+    print(f"============ BOOKBOT ============'\n'Analyzing book found at books/frankenstein.txt...'\n'{dict}'\n' Found {num_words} total words '\n'{dict}")
 
 def get_book_text(path):
     with open(path) as f:
